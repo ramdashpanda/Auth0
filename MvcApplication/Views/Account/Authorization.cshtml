@@ -1,0 +1,15 @@
+﻿@using MvcApplication.Model
+@model AuthResponse
+@{
+    ViewBag.Title = "Authorization";
+}
+
+<h2>Authrization</h2>
+
+<div>Access Token : @Model.access_token</div>
+<br />
+<div>Refresh Token : @Model.refresh_token</div>
+<br />
+<div>Token Type : @Model.token_type</div>
+<br />
+<a href="/Account/AuthorizationToken?refresh_token=@Model.refresh_token" target="_blank">Get Another Token</a>
